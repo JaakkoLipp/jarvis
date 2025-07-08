@@ -27,45 +27,6 @@ Jarvis is a Discord bot that integrates with a custom OpenAPI-compliant LLM API.
 
 Jarvis will use the replied-to message as additional context.
 
-## Setup
-
-1. **Clone the Repository**
-
-```bash
-git clone https://github.com/yourusername/jarvis-discord-bot.git
-cd jarvis-discord-bot
-```
-
-2. **Install Dependencies**
-
-```bash
-npm install
-```
-
-3. **Configure Environment Variables**  
-   Create a `.env` file with the following:
-
-```
-DISCORD_TOKEN=your-discord-bot-token
-LLM_API_URL=https://your-llm-api-endpoint
-LLM_API_KEY=your-llm-api-key
-```
-
-4. **Run the Bot**
-
-```bash
-npm start
-```
-
-## Configuration
-
-- **LLM_API_URL**: The endpoint of your OpenAPI-compliant LLM.
-- **LLM_API_KEY**: API key or token for authentication (if required).
-
-## License
-
-MIT License
-
 ---
 
 _Jarvis is not affiliated with Discord or OpenAI._
