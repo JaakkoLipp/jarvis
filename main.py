@@ -30,7 +30,9 @@ async def ask_ollama(user_prompt: str,
                      context: str | None = None,
                      model: str = OLLAMA_MODEL) -> str:
     """Send user_prompt (+ optional context) to Ollama and return the reply."""
-    assert session and not session.closed, "HTTP session not ready"
+    global session
+    if session is None or session.closed:
+        session = aiohttp.ClientSession()
 
     # Embed context above the actual prompt if we have any
     prompt = (f"Previous message:\n{context}\n\nUser:\n{user_prompt}"
